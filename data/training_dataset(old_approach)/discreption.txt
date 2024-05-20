@@ -1,0 +1,19 @@
+All the datasets in this folder were constructed using the old approach of collecting the ambient temperature inside the chamber. 
+The ambient temperature measurement was conducted using an external multiplexer device with small sensors connected to the inner chamber of the oven.
+Additionally, the datasets contain only some features that are used to train the latest version of Machine/Deep learning models. These features include charging_state,
+screen_state, cpu_usage and others, which were not part of these datasets.
+
+A brief explanation of each dataset existing in this folder:
+camera_50to20c_23_2.csv: This dataset contains an experiment of mobile thermal state when the mobile recording video at 50C and 20C ambient temperature. The video quality ranges from 1080p up to 4k resolution.
+
+cpu_loads_mix_amb_utf8.csv: This dataset contains an experiment of mobile thermal state under different cpu_workloads from 10C-50C ambient temperature. At each ambient temperature level, three experiments on the cpu_workload ratio were conducted on the mobile, including  100%, 75%, and 50%. However, keep in mind that the thermal management software system was activated, which throttles the CPU once the temperature of the CPU goes above a certain threshold.As a result, the CPU temperature didn't go up extremly high as we did in other experiments.
+
+exper_cpu_disp_chg.csv: This dataset contains an experiment of mobile thermal state under different CPU_workloads at 23C ambient temperature. The aim of this experiment was to study the effect of the screen state (on/off) and charging state(plugg/unplugg) on the mobile internal thermal state during the cpu_workloads. The two experiments in the middle showcase the thermal state under CPU_workload experiment together with the screen is on, and the charging state is off and on, respectively. The thermal management system software was activated.
+
+extansive_dataset.csv: This dataset contains an experiment of mobile thermal state under different cpu_workloads from 0C-50C ambient temperature. At each ambient temperature level, three experiments on the cpu_workload ratio were conducted on the mobile, including 50%, 100%, and 75% . Each workloads ratio were repeated three times, because the aim was to ensure that the mobile phone behaviours the same  under a specific CPU_workloads ratio. The thermal management system software was activated.
+
+idle_10_35_50.csv: This dataset contains only thermal data when the mobile is idle at 10C, 35C and 50C.
+
+mix_CPU_loads_withBreak.csv: This dataset contains an experiment of mobile thermal state under different cpu_workloads from 0C-50C ambient temperature. At each ambient temperature level, three experiments on the cpu_workload ratio were conducted on the mobile, including  100%, 75%, and 50%. However, keep in mind that the thermal management software system was activated, which throttles the CPU once the temperature of the CPU goes above a certain threshold.As a result, the CPU temperature didn't go up extremly high as we did in other experiments. The full details of this experiment is in mix_CPU_loads_withBreak.png image.
+
+verification.csv: This dataset was used as a test dataset to evaluate the performance of the old versions of ML/DP models. 
